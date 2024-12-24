@@ -26,21 +26,21 @@ The Black–Scholes model is used to price European options. It assumes constant
 <img src="images/1.png" alt="Equation 1" width="200">
 
 #### Put Option Formula:
-<img src="images/2.png" alt="Equation 1" width="200">
+<img src="images/2.png" alt="Equation 2" width="200">
 
 Where:
-<img src="images/3.png" alt="Equation 1" width="200">
+<img src="images/3.png" alt="Equation 3" width="200">
 
 ### 2. **Binomial Option Pricing Model (BOPM)**
 The binomial model values options by iteratively working backwards through a recombining tree of possible asset prices. It calculates the option price at each step based on risk-neutral probabilities.
 
 #### Parameters:
-- Up factor: <img src="images/4.png" alt="Equation 1" width="100">
-- Down factor: <img src="images/5.png" alt="Equation 1" width="100">
-- Risk-neutral probability: <img src="images/6.png" alt="Equation 1" width="100">
+- Up factor: <img src="images/4.png" alt="Equation 4" width="100">
+- Down factor: <img src="images/5.png" alt="Equation 5" width="100">
+- Risk-neutral probability: <img src="images/6.png" alt="Equation 6" width="100">
 
 #### Backward Induction:
-<img src="images/7.png" alt="Equation 1" width="200">
+<img src="images/7.png" alt="Equation 7" width="200">
 
 ### 3. **Cox-Ross-Rubinstein (CRR) Model**
 The CRR model is a specific implementation of the binomial model with recombining trees. The asset price follows a multiplicative up and down movement, making the tree computationally efficient.
@@ -50,21 +50,21 @@ The CRR model is a specific implementation of the binomial model with recombinin
 2. Compute terminal payoffs (call/put).
 3. Use backward induction to derive the option price at the initial node.
 
-The equations are identical to the binomial model but emphasize consistent up/down factors: <img src="images/8.png" alt="Equation 1" width="100">.
+The equations are identical to the binomial model but emphasize consistent up/down factors: <img src="images/8.png" alt="Equation 8" width="100">.
 
 ### 4. **Monte Carlo Simulation**
 Monte Carlo simulation involves simulating the potential future prices of the underlying asset using a stochastic process, then calculating the expected payoff.
 
 #### Stochastic Process:
-<img src="images/9.png" alt="Equation 1" width="200">
+<img src="images/9.png" alt="Equation 9" width="200">
 Where Z is a standard normal random variable.
 
 #### Expected Payoff:
-- Call Option: <img src="images/10.png" alt="Equation 1" width="100">
-- Put Option: <img src="images/11.png" alt="Equation 1" width="100">
+- Call Option: <img src="images/10.png" alt="Equation 10" width="100">
+- Put Option: <img src="images/11.png" alt="Equation 11" width="100">
 
 Discount the average payoff to present value:
-<img src="images/12.png" alt="Equation 1" width="200">
+<img src="images/12.png" alt="Equation 12" width="200">
 
 ---
 
