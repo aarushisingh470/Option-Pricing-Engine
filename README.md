@@ -23,7 +23,7 @@ This project is an interactive Streamlit application showcasing various mathemat
 The Black–Scholes model is used to price European options. It assumes constant volatility and interest rates and uses a lognormal distribution for the asset price.
 
 #### Call Option Formula:
-![Equation 1](images/1.png)
+<img src="images/1.png" alt="Equation 1" width="100">
 
 #### Put Option Formula:
 ![Equation 1](images/2.png)
