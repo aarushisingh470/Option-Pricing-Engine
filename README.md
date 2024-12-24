@@ -23,36 +23,25 @@ This project is an interactive Streamlit application showcasing various mathemat
 The Black–Scholes model is used to price European options. It assumes constant volatility and interest rates and uses a lognormal distribution for the asset price.
 
 #### Call Option Formula:
-\[
-C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
-\]
+![Equation 1](images/1.png)
 
 #### Put Option Formula:
-\[
-P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
-\]
+![Equation 1](images/2.png)
 
 Where:
-\[
-d_1 = \frac{\ln(S/K) + (r + 0.5 \cdot \sigma^2) \cdot T}{\sigma \cdot \sqrt{T}}, \quad
-d_2 = d_1 - \sigma \cdot \sqrt{T}
-\]
+![Equation 1](images/3.png)
 
 ### 2. **Binomial Option Pricing Model (BOPM)**
 The binomial model values options by iteratively working backwards through a recombining tree of possible asset prices. It calculates the option price at each step based on risk-neutral probabilities.
 
 #### Parameters:
-- Up factor: \( u = e^{\sigma \cdot \sqrt{\Delta t}} \)
-- Down factor: \( d = e^{-\sigma \cdot \sqrt{\Delta t}} \)
+- Up factor: ![Equation 1](images/4.png)
+- Down factor: ![Equation 1](images/5.png)
 - Risk-neutral probability:
-\[
-p = \frac{e^{r \cdot \Delta t} - d}{u - d}
-\]
+![Equation 1](images/6.png)
 
 #### Backward Induction:
-\[
-V_{\text{node}} = e^{-r \cdot \Delta t} \cdot (p \cdot V_{\text{up}} + (1-p) \cdot V_{\text{down}})
-\]
+![Equation 1](images/7.png)
 
 ### 3. **Cox-Ross-Rubinstein (CRR) Model**
 The CRR model is a specific implementation of the binomial model with recombining trees. The asset price follows a multiplicative up and down movement, making the tree computationally efficient.
@@ -62,25 +51,21 @@ The CRR model is a specific implementation of the binomial model with recombinin
 2. Compute terminal payoffs (call/put).
 3. Use backward induction to derive the option price at the initial node.
 
-The equations are identical to the binomial model but emphasize consistent up/down factors: \( u = e^{\sigma \sqrt{\Delta t}} \), \( d = 1/u \).
+The equations are identical to the binomial model but emphasize consistent up/down factors: ![Equation 1](images/8.png).
 
 ### 4. **Monte Carlo Simulation**
 Monte Carlo simulation involves simulating the potential future prices of the underlying asset using a stochastic process, then calculating the expected payoff.
 
 #### Stochastic Process:
-\[
-S_T = S \cdot e^{(r - 0.5 \cdot \sigma^2) \cdot T + \sigma \cdot \sqrt{T} \cdot Z}
-\]
-Where \( Z \) is a standard normal random variable.
+![Equation 1](images/9.png)
+Where Z is a standard normal random variable.
 
 #### Expected Payoff:
-- Call Option: \( \max(S_T - K, 0) \)
-- Put Option: \( \max(K - S_T, 0) \)
+- Call Option: ![Equation 1](images/10.png)
+- Put Option: ![Equation 1](images/11.png)
 
 Discount the average payoff to present value:
-\[
-\text{Option Price} = e^{-r \cdot T} \cdot \text{mean(payoffs)}
-\]
+![Equation 1](images/12.png)
 
 ---
 
