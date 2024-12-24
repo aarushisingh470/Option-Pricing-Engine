@@ -23,25 +23,24 @@ This project is an interactive Streamlit application showcasing various mathemat
 The Black–Scholes model is used to price European options. It assumes constant volatility and interest rates and uses a lognormal distribution for the asset price.
 
 #### Call Option Formula:
-<img src="images/1.png" alt="Equation 1" width="100">
+<img src="images/1.png" alt="Equation 1" width="200">
 
 #### Put Option Formula:
-![Equation 1](images/2.png)
+<img src="images/2.png" alt="Equation 1" width="300">
 
 Where:
-![Equation 1](images/3.png)
+<img src="images/3.png" alt="Equation 1" width="300">
 
 ### 2. **Binomial Option Pricing Model (BOPM)**
 The binomial model values options by iteratively working backwards through a recombining tree of possible asset prices. It calculates the option price at each step based on risk-neutral probabilities.
 
 #### Parameters:
-- Up factor: ![Equation 1](images/4.png)
-- Down factor: ![Equation 1](images/5.png)
-- Risk-neutral probability:
-![Equation 1](images/6.png)
+- Up factor: <img src="images/4.png" alt="Equation 1" width="150">
+- Down factor: <img src="images/5.png" alt="Equation 1" width="150">
+- Risk-neutral probability: <img src="images/6.png" alt="Equation 1" width="150">
 
 #### Backward Induction:
-![Equation 1](images/7.png)
+<img src="images/7.png" alt="Equation 1" width="300">
 
 ### 3. **Cox-Ross-Rubinstein (CRR) Model**
 The CRR model is a specific implementation of the binomial model with recombining trees. The asset price follows a multiplicative up and down movement, making the tree computationally efficient.
